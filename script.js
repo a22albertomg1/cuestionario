@@ -23,36 +23,27 @@ const questions = [
             { text: "Pagos fraccionados", correct: false },
             { text: "Deducciones fiscales", correct: false }
         ]
-    },{
-        question: "¿Cuál es la principal responsabilidad fiscal del IRPF?",
-        answers: [
-            { text: "Retenciones e ingresos a cuenta", correct: true },
-            { text: "Declaración anual", correct: false },
-            { text: "Pagos fraccionados", correct: false },
-            { text: "Deducciones fiscales", correct: false }
-        ]
-    },{
-        question: "¿Cuál es la principal responsabilidad fiscal del IRPF?",
-        answers: [
-            { text: "Retenciones e ingresos a cuenta", correct: true },
-            { text: "Declaración anual", correct: false },
-            { text: "Pagos fraccionados", correct: false },
-            { text: "Deducciones fiscales", correct: false }
-        ]
     },
     // Añade más preguntas aquí
 ];
 
 let currentQuestionIndex = 0;
+let score = 0; // Para contar los aciertos
+let totalAnswered = 0; // Para contar las preguntas respondidas
 const questionContainer = document.getElementById('question-container');
 const questionElement = document.getElementById('question');
 const answerButtonsElement = document.getElementById('answer-buttons');
 const nextButton = document.getElementById('next-btn');
 const prevButton = document.getElementById('prev-btn');
 const questionCounter = document.getElementById('question-counter');
+const scoreElement = document.getElementById('score');
+const totalElement = document.getElementById('total');
 
 function startQuiz() {
     currentQuestionIndex = 0;
+    score = 0;
+    totalAnswered = 0;
+    updateScore();
     nextButton.innerText = 'Siguiente';
     nextButton.classList.add('hide');
     prevButton.classList.add('hide');
@@ -91,6 +82,13 @@ function selectAnswer(e) {
         setStatusClass(button, button.dataset.correct === 'true');
     });
 
+    // Actualizar el contador de aciertos
+    if (selectedButton.dataset.correct) {
+        score++;
+    }
+    totalAnswered++;
+    updateScore();
+
     nextButton.classList.remove('hide');
     if (currentQuestionIndex > 0) {
         prevButton.classList.remove('hide');
@@ -118,6 +116,11 @@ function clearStatusClass(element) {
 
 function updateQuestionCounter() {
     questionCounter.innerText = `${currentQuestionIndex + 1} / ${questions.length}`;
+}
+
+function updateScore() {
+    scoreElement.innerText = score;
+    totalElement.innerText = totalAnswered;
 }
 
 function updateButtons() {
