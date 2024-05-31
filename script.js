@@ -1,27 +1,642 @@
 const questions = [
     {
-        question: "¿Cuál es la principal responsabilidad fiscal del IRPF?",
+        question: "As cantidades bloqueadas pola empresa con vistas a atender posibles perdas ou desembolsos futuros, chámanse:",
         answers: [
-            { text: "Retenciones e ingresos a cuenta", correct: true },
-            { text: "Declaración anual", correct: false },
-            { text: "Pagos fraccionados", correct: false },
-            { text: "Deducciones fiscales", correct: false }
+            { text: "Descubertos", correct: false },
+            { text: "Fondos propios", correct: false },
+            { text: "Amortizacións", correct: false },
+            { text: "Provisions", correct: true },
+            { text: "Reservas", correct: false }
         ]
     },{
-        question: "¿Cuál es la principal responsabilidad fiscal del IRPF?",
+        question: "Polo feito de ser dono dunha vivenda hai que pagar todos os anos:",
         answers: [
-            { text: "Retenciones e ingresos a cuenta", correct: true },
-            { text: "Declaración anual", correct: false },
-            { text: "Pagos fraccionados", correct: false },
-            { text: "Deducciones fiscales", correct: false }
+            { text: "IBI", correct: true },
+            { text: "ICIO", correct: false },
+            { text: "Plusvalía", correct: false },
+            { text: "IVE", correct: false },
+            { text: "IAE", correct: false }
+        ],
+    },{
+        question: "O préstamo bancario que a empresa debe devolver a curto prazo inclúese dentro de:",
+        answers: [
+            { text: "Activo non corrente (financeiro)", correct: false },
+            { text: "Activo corrente (dispoñible)", correct: false },
+            { text: "Pasivo non corrente", correct: false },
+            { text: "Pasivo corrente", correct: true },
+            { text: "Patrimonio neto", correct: false }
         ]
     },{
-        question: "¿Cuál es la principal responsabilidad fiscal del IRPF?",
+        question: "Cal dos seguintes non é un dos réximes especiais do IVE?:",
         answers: [
-            { text: "Retenciones e ingresos a cuenta", correct: true },
-            { text: "Declaración anual", correct: false },
-            { text: "Pagos fraccionados", correct: false },
-            { text: "Deducciones fiscales", correct: false }
+            { text: "Comercio maiorista", correct: true },
+            { text: "Simplificado", correct: false },
+            { text: "Axencias de viaxe", correct: false },
+            { text: "Agricultura", correct: false },
+            { text: "Todos son réximes especiais do IVE.", correct: false }
+        ],
+    },{
+        question: "A Lei Cambiaria e do Cheque regula:",
+        answers: [
+            { text: "Cheque", correct: false },
+            { text: "Cheque e factura", correct: false },
+            { text: "Cheque, obriga de pagamento e letra de cambio", correct: true },
+            { text: "Cheque e letra de cambio", correct: false },
+            { text: "Cheque e obriga de pagamento", correct: false }
+        ],
+    },{
+        question: "O contrato de aluguer que inclúe o mantemento, reparación e seguro a todo risco do ben arrendado, chámase:",
+        answers: [
+            { text: "Leasing", correct: false },
+            { text: "Renting", correct: true },
+            { text: "Desconto", correct: false },
+            { text: "Factoring", correct: false },
+            { text: "Confirming", correct: false }
+        ],
+    },{
+        question: "Na obriga de pagamento, se a data de vencemento aparece en branco:",
+        answers: [
+            { text: "A obriga de pagamento sería válida pero non tería valor executivo.", correct: false },
+            { text: "Entenderíase que a obriga de pagamento é pagadoira aos 15 días da data de emisión.", correct: false },
+            { text: "A obriga de pagamento non sería válida.", correct: false },
+            { text: "Pode presentarse ao cobro en calquera momento, sen esperar a unha determinada data.", correct: true },
+            { text: "A obriga de pagamento non sería endosable.", correct: false }
+        ],
+    },{
+        question: "A persoa que emite a letra de cambio chámase:",
+        answers: [
+            { text: "Librador.", correct: true },
+            { text: "Asinante.", correct: false },
+            { text: "Tomador.", correct: false },
+            { text: "Aceptante.", correct: false },
+            { text: "Librado.", correct: false }
+        ],
+    },{
+        question: "Nas cooperativas de segundo grao o número mínimo de socios é de:",
+        answers: [
+            { text: "4.", correct: false },
+            { text: "5.", correct: false },
+            { text: "2.", correct: true },
+            { text: "1.", correct: false },
+            { text: "3.", correct: false }
+        ],
+    },{
+        question: "A tipo de financiamento máis caro é:",
+        answers: [
+            { text: "Crédito comercial.", correct: false },
+            { text: "Conta de crédito.", correct: false },
+            { text: "Factoring.", correct: false },
+            { text: "Descuberto bancario.", correct: true },
+            { text: "Confirming.", correct: false }
+        ],
+    },{
+        question: "Cal das seguintes empresas ten o seu capital dividido en accións?",
+        answers: [
+            { text: "SL.", correct: false },
+            { text: "S. Coop.", correct: false },
+            { text: "SLL.", correct: false },
+            { text: "SAL.", correct: true },
+            { text: "Ningunha delas.", correct: false }
+        ],
+    },{
+        question: "O capital mínimo para constituír unha sociedade anónima é:",
+        answers: [
+            { text: "Non se esixe capital mínimo.", correct: false },
+            { text: "60.000€ totalmente subscrito e desembolsado.", correct: false },
+            { text: "3.000€ totalmente subscrito e desembolsado nun 25%.", correct: false },
+            { text: "60.000€ totalmente subscrito e desembolsado nun 25%.", correct: true },
+            { text: "3.000€ totalmente subscrito e desembolsado.", correct: false }
+        ],
+    },{
+        question: "O recargo de equivalencia aplicable a un produto que ten un IVE do 10%, é de:",
+        answers: [
+            { text: "2,5%", correct: true },
+            { text: "0,5%", correct: false },
+            { text: "7,1%", correct: false },
+            { text: "5,2%", correct: false },
+            { text: "1,4%", correct: false }
+        ],
+    },{
+        question: "O préstamo bancario que a empresa debe devolver a curto prazo inclúese dentro de:",
+        answers: [
+            { text: "Activo non corrente (financeiro)", correct: false },
+            { text: "Activo corrente (dispoñible)", correct: false },
+            { text: "Pasivo non corrente", correct: false },
+            { text: "Pasivo corrente", correct: true },
+            { text: "Patrimonio neto", correct: false }
+        ]
+    },{
+        question: "O préstamo bancario que a empresa debe devolver a curto prazo inclúese dentro de:",
+        answers: [
+            { text: "Activo non corrente (financeiro)", correct: false },
+            { text: "Activo corrente (dispoñible)", correct: false },
+            { text: "Pasivo non corrente", correct: false },
+            { text: "Pasivo corrente", correct: true },
+            { text: "Patrimonio neto", correct: false }
+        ]
+    },{
+        question: "O préstamo bancario que a empresa debe devolver a curto prazo inclúese dentro de:",
+        answers: [
+            { text: "Activo non corrente (financeiro)", correct: false },
+            { text: "Activo corrente (dispoñible)", correct: false },
+            { text: "Pasivo non corrente", correct: false },
+            { text: "Pasivo corrente", correct: true },
+            { text: "Patrimonio neto", correct: false }
+        ]
+    },{
+        question: "O préstamo bancario que a empresa debe devolver a curto prazo inclúese dentro de:",
+        answers: [
+            { text: "Activo non corrente (financeiro)", correct: false },
+            { text: "Activo corrente (dispoñible)", correct: false },
+            { text: "Pasivo non corrente", correct: false },
+            { text: "Pasivo corrente", correct: true },
+            { text: "Patrimonio neto", correct: false }
+        ]
+    },{
+        question: "O préstamo bancario que a empresa debe devolver a curto prazo inclúese dentro de:",
+        answers: [
+            { text: "Activo non corrente (financeiro)", correct: false },
+            { text: "Activo corrente (dispoñible)", correct: false },
+            { text: "Pasivo non corrente", correct: false },
+            { text: "Pasivo corrente", correct: true },
+            { text: "Patrimonio neto", correct: false }
+        ]
+    },{
+        question: "O préstamo bancario que a empresa debe devolver a curto prazo inclúese dentro de:",
+        answers: [
+            { text: "Activo non corrente (financeiro)", correct: false },
+            { text: "Activo corrente (dispoñible)", correct: false },
+            { text: "Pasivo non corrente", correct: false },
+            { text: "Pasivo corrente", correct: true },
+            { text: "Patrimonio neto", correct: false }
+        ]
+    },{
+        question: "O préstamo bancario que a empresa debe devolver a curto prazo inclúese dentro de:",
+        answers: [
+            { text: "Activo non corrente (financeiro)", correct: false },
+            { text: "Activo corrente (dispoñible)", correct: false },
+            { text: "Pasivo non corrente", correct: false },
+            { text: "Pasivo corrente", correct: true },
+            { text: "Patrimonio neto", correct: false }
+        ]
+    },{
+        question: "O préstamo bancario que a empresa debe devolver a curto prazo inclúese dentro de:",
+        answers: [
+            { text: "Activo non corrente (financeiro)", correct: false },
+            { text: "Activo corrente (dispoñible)", correct: false },
+            { text: "Pasivo non corrente", correct: false },
+            { text: "Pasivo corrente", correct: true },
+            { text: "Patrimonio neto", correct: false }
+        ]
+    },{
+        question: "O préstamo bancario que a empresa debe devolver a curto prazo inclúese dentro de:",
+        answers: [
+            { text: "Activo non corrente (financeiro)", correct: false },
+            { text: "Activo corrente (dispoñible)", correct: false },
+            { text: "Pasivo non corrente", correct: false },
+            { text: "Pasivo corrente", correct: true },
+            { text: "Patrimonio neto", correct: false }
+        ]
+    },{
+        question: "O préstamo bancario que a empresa debe devolver a curto prazo inclúese dentro de:",
+        answers: [
+            { text: "Activo non corrente (financeiro)", correct: false },
+            { text: "Activo corrente (dispoñible)", correct: false },
+            { text: "Pasivo non corrente", correct: false },
+            { text: "Pasivo corrente", correct: true },
+            { text: "Patrimonio neto", correct: false }
+        ]
+    },{
+        question: "O préstamo bancario que a empresa debe devolver a curto prazo inclúese dentro de:",
+        answers: [
+            { text: "Activo non corrente (financeiro)", correct: false },
+            { text: "Activo corrente (dispoñible)", correct: false },
+            { text: "Pasivo non corrente", correct: false },
+            { text: "Pasivo corrente", correct: true },
+            { text: "Patrimonio neto", correct: false }
+        ]
+    },{
+        question: "O préstamo bancario que a empresa debe devolver a curto prazo inclúese dentro de:",
+        answers: [
+            { text: "Activo non corrente (financeiro)", correct: false },
+            { text: "Activo corrente (dispoñible)", correct: false },
+            { text: "Pasivo non corrente", correct: false },
+            { text: "Pasivo corrente", correct: true },
+            { text: "Patrimonio neto", correct: false }
+        ]
+    },{
+        question: "O préstamo bancario que a empresa debe devolver a curto prazo inclúese dentro de:",
+        answers: [
+            { text: "Activo non corrente (financeiro)", correct: false },
+            { text: "Activo corrente (dispoñible)", correct: false },
+            { text: "Pasivo non corrente", correct: false },
+            { text: "Pasivo corrente", correct: true },
+            { text: "Patrimonio neto", correct: false }
+        ]
+    },{
+        question: "O préstamo bancario que a empresa debe devolver a curto prazo inclúese dentro de:",
+        answers: [
+            { text: "Activo non corrente (financeiro)", correct: false },
+            { text: "Activo corrente (dispoñible)", correct: false },
+            { text: "Pasivo non corrente", correct: false },
+            { text: "Pasivo corrente", correct: true },
+            { text: "Patrimonio neto", correct: false }
+        ]
+    },{
+        question: "O préstamo bancario que a empresa debe devolver a curto prazo inclúese dentro de:",
+        answers: [
+            { text: "Activo non corrente (financeiro)", correct: false },
+            { text: "Activo corrente (dispoñible)", correct: false },
+            { text: "Pasivo non corrente", correct: false },
+            { text: "Pasivo corrente", correct: true },
+            { text: "Patrimonio neto", correct: false }
+        ]
+    },{
+        question: "O préstamo bancario que a empresa debe devolver a curto prazo inclúese dentro de:",
+        answers: [
+            { text: "Activo non corrente (financeiro)", correct: false },
+            { text: "Activo corrente (dispoñible)", correct: false },
+            { text: "Pasivo non corrente", correct: false },
+            { text: "Pasivo corrente", correct: true },
+            { text: "Patrimonio neto", correct: false }
+        ]
+    },{
+        question: "O préstamo bancario que a empresa debe devolver a curto prazo inclúese dentro de:",
+        answers: [
+            { text: "Activo non corrente (financeiro)", correct: false },
+            { text: "Activo corrente (dispoñible)", correct: false },
+            { text: "Pasivo non corrente", correct: false },
+            { text: "Pasivo corrente", correct: true },
+            { text: "Patrimonio neto", correct: false }
+        ]
+    },{
+        question: "O préstamo bancario que a empresa debe devolver a curto prazo inclúese dentro de:",
+        answers: [
+            { text: "Activo non corrente (financeiro)", correct: false },
+            { text: "Activo corrente (dispoñible)", correct: false },
+            { text: "Pasivo non corrente", correct: false },
+            { text: "Pasivo corrente", correct: true },
+            { text: "Patrimonio neto", correct: false }
+        ]
+    },{
+        question: "O préstamo bancario que a empresa debe devolver a curto prazo inclúese dentro de:",
+        answers: [
+            { text: "Activo non corrente (financeiro)", correct: false },
+            { text: "Activo corrente (dispoñible)", correct: false },
+            { text: "Pasivo non corrente", correct: false },
+            { text: "Pasivo corrente", correct: true },
+            { text: "Patrimonio neto", correct: false }
+        ]
+    },{
+        question: "O préstamo bancario que a empresa debe devolver a curto prazo inclúese dentro de:",
+        answers: [
+            { text: "Activo non corrente (financeiro)", correct: false },
+            { text: "Activo corrente (dispoñible)", correct: false },
+            { text: "Pasivo non corrente", correct: false },
+            { text: "Pasivo corrente", correct: true },
+            { text: "Patrimonio neto", correct: false }
+        ]
+    },{
+        question: "O préstamo bancario que a empresa debe devolver a curto prazo inclúese dentro de:",
+        answers: [
+            { text: "Activo non corrente (financeiro)", correct: false },
+            { text: "Activo corrente (dispoñible)", correct: false },
+            { text: "Pasivo non corrente", correct: false },
+            { text: "Pasivo corrente", correct: true },
+            { text: "Patrimonio neto", correct: false }
+        ]
+    },{
+        question: "O préstamo bancario que a empresa debe devolver a curto prazo inclúese dentro de:",
+        answers: [
+            { text: "Activo non corrente (financeiro)", correct: false },
+            { text: "Activo corrente (dispoñible)", correct: false },
+            { text: "Pasivo non corrente", correct: false },
+            { text: "Pasivo corrente", correct: true },
+            { text: "Patrimonio neto", correct: false }
+        ]
+    },{
+        question: "O préstamo bancario que a empresa debe devolver a curto prazo inclúese dentro de:",
+        answers: [
+            { text: "Activo non corrente (financeiro)", correct: false },
+            { text: "Activo corrente (dispoñible)", correct: false },
+            { text: "Pasivo non corrente", correct: false },
+            { text: "Pasivo corrente", correct: true },
+            { text: "Patrimonio neto", correct: false }
+        ]
+    },{
+        question: "O préstamo bancario que a empresa debe devolver a curto prazo inclúese dentro de:",
+        answers: [
+            { text: "Activo non corrente (financeiro)", correct: false },
+            { text: "Activo corrente (dispoñible)", correct: false },
+            { text: "Pasivo non corrente", correct: false },
+            { text: "Pasivo corrente", correct: true },
+            { text: "Patrimonio neto", correct: false }
+        ]
+    },{
+        question: "O préstamo bancario que a empresa debe devolver a curto prazo inclúese dentro de:",
+        answers: [
+            { text: "Activo non corrente (financeiro)", correct: false },
+            { text: "Activo corrente (dispoñible)", correct: false },
+            { text: "Pasivo non corrente", correct: false },
+            { text: "Pasivo corrente", correct: true },
+            { text: "Patrimonio neto", correct: false }
+        ]
+    },{
+        question: "O préstamo bancario que a empresa debe devolver a curto prazo inclúese dentro de:",
+        answers: [
+            { text: "Activo non corrente (financeiro)", correct: false },
+            { text: "Activo corrente (dispoñible)", correct: false },
+            { text: "Pasivo non corrente", correct: false },
+            { text: "Pasivo corrente", correct: true },
+            { text: "Patrimonio neto", correct: false }
+        ]
+    },{
+        question: "O préstamo bancario que a empresa debe devolver a curto prazo inclúese dentro de:",
+        answers: [
+            { text: "Activo non corrente (financeiro)", correct: false },
+            { text: "Activo corrente (dispoñible)", correct: false },
+            { text: "Pasivo non corrente", correct: false },
+            { text: "Pasivo corrente", correct: true },
+            { text: "Patrimonio neto", correct: false }
+        ]
+    },{
+        question: "O préstamo bancario que a empresa debe devolver a curto prazo inclúese dentro de:",
+        answers: [
+            { text: "Activo non corrente (financeiro)", correct: false },
+            { text: "Activo corrente (dispoñible)", correct: false },
+            { text: "Pasivo non corrente", correct: false },
+            { text: "Pasivo corrente", correct: true },
+            { text: "Patrimonio neto", correct: false }
+        ]
+    },{
+        question: "O préstamo bancario que a empresa debe devolver a curto prazo inclúese dentro de:",
+        answers: [
+            { text: "Activo non corrente (financeiro)", correct: false },
+            { text: "Activo corrente (dispoñible)", correct: false },
+            { text: "Pasivo non corrente", correct: false },
+            { text: "Pasivo corrente", correct: true },
+            { text: "Patrimonio neto", correct: false }
+        ]
+    },{
+        question: "O préstamo bancario que a empresa debe devolver a curto prazo inclúese dentro de:",
+        answers: [
+            { text: "Activo non corrente (financeiro)", correct: false },
+            { text: "Activo corrente (dispoñible)", correct: false },
+            { text: "Pasivo non corrente", correct: false },
+            { text: "Pasivo corrente", correct: true },
+            { text: "Patrimonio neto", correct: false }
+        ]
+    },{
+        question: "O préstamo bancario que a empresa debe devolver a curto prazo inclúese dentro de:",
+        answers: [
+            { text: "Activo non corrente (financeiro)", correct: false },
+            { text: "Activo corrente (dispoñible)", correct: false },
+            { text: "Pasivo non corrente", correct: false },
+            { text: "Pasivo corrente", correct: true },
+            { text: "Patrimonio neto", correct: false }
+        ]
+    },{
+        question: "O préstamo bancario que a empresa debe devolver a curto prazo inclúese dentro de:",
+        answers: [
+            { text: "Activo non corrente (financeiro)", correct: false },
+            { text: "Activo corrente (dispoñible)", correct: false },
+            { text: "Pasivo non corrente", correct: false },
+            { text: "Pasivo corrente", correct: true },
+            { text: "Patrimonio neto", correct: false }
+        ]
+    },{
+        question: "O préstamo bancario que a empresa debe devolver a curto prazo inclúese dentro de:",
+        answers: [
+            { text: "Activo non corrente (financeiro)", correct: false },
+            { text: "Activo corrente (dispoñible)", correct: false },
+            { text: "Pasivo non corrente", correct: false },
+            { text: "Pasivo corrente", correct: true },
+            { text: "Patrimonio neto", correct: false }
+        ]
+    },{
+        question: "O préstamo bancario que a empresa debe devolver a curto prazo inclúese dentro de:",
+        answers: [
+            { text: "Activo non corrente (financeiro)", correct: false },
+            { text: "Activo corrente (dispoñible)", correct: false },
+            { text: "Pasivo non corrente", correct: false },
+            { text: "Pasivo corrente", correct: true },
+            { text: "Patrimonio neto", correct: false }
+        ]
+    },{
+        question: "O préstamo bancario que a empresa debe devolver a curto prazo inclúese dentro de:",
+        answers: [
+            { text: "Activo non corrente (financeiro)", correct: false },
+            { text: "Activo corrente (dispoñible)", correct: false },
+            { text: "Pasivo non corrente", correct: false },
+            { text: "Pasivo corrente", correct: true },
+            { text: "Patrimonio neto", correct: false }
+        ]
+    },{
+        question: "O préstamo bancario que a empresa debe devolver a curto prazo inclúese dentro de:",
+        answers: [
+            { text: "Activo non corrente (financeiro)", correct: false },
+            { text: "Activo corrente (dispoñible)", correct: false },
+            { text: "Pasivo non corrente", correct: false },
+            { text: "Pasivo corrente", correct: true },
+            { text: "Patrimonio neto", correct: false }
+        ]
+    },{
+        question: "O préstamo bancario que a empresa debe devolver a curto prazo inclúese dentro de:",
+        answers: [
+            { text: "Activo non corrente (financeiro)", correct: false },
+            { text: "Activo corrente (dispoñible)", correct: false },
+            { text: "Pasivo non corrente", correct: false },
+            { text: "Pasivo corrente", correct: true },
+            { text: "Patrimonio neto", correct: false }
+        ]
+    },{
+        question: "O préstamo bancario que a empresa debe devolver a curto prazo inclúese dentro de:",
+        answers: [
+            { text: "Activo non corrente (financeiro)", correct: false },
+            { text: "Activo corrente (dispoñible)", correct: false },
+            { text: "Pasivo non corrente", correct: false },
+            { text: "Pasivo corrente", correct: true },
+            { text: "Patrimonio neto", correct: false }
+        ]
+    },{
+        question: "O préstamo bancario que a empresa debe devolver a curto prazo inclúese dentro de:",
+        answers: [
+            { text: "Activo non corrente (financeiro)", correct: false },
+            { text: "Activo corrente (dispoñible)", correct: false },
+            { text: "Pasivo non corrente", correct: false },
+            { text: "Pasivo corrente", correct: true },
+            { text: "Patrimonio neto", correct: false }
+        ]
+    },{
+        question: "O préstamo bancario que a empresa debe devolver a curto prazo inclúese dentro de:",
+        answers: [
+            { text: "Activo non corrente (financeiro)", correct: false },
+            { text: "Activo corrente (dispoñible)", correct: false },
+            { text: "Pasivo non corrente", correct: false },
+            { text: "Pasivo corrente", correct: true },
+            { text: "Patrimonio neto", correct: false }
+        ]
+    },{
+        question: "O préstamo bancario que a empresa debe devolver a curto prazo inclúese dentro de:",
+        answers: [
+            { text: "Activo non corrente (financeiro)", correct: false },
+            { text: "Activo corrente (dispoñible)", correct: false },
+            { text: "Pasivo non corrente", correct: false },
+            { text: "Pasivo corrente", correct: true },
+            { text: "Patrimonio neto", correct: false }
+        ]
+    },{
+        question: "O préstamo bancario que a empresa debe devolver a curto prazo inclúese dentro de:",
+        answers: [
+            { text: "Activo non corrente (financeiro)", correct: false },
+            { text: "Activo corrente (dispoñible)", correct: false },
+            { text: "Pasivo non corrente", correct: false },
+            { text: "Pasivo corrente", correct: true },
+            { text: "Patrimonio neto", correct: false }
+        ]
+    },{
+        question: "O préstamo bancario que a empresa debe devolver a curto prazo inclúese dentro de:",
+        answers: [
+            { text: "Activo non corrente (financeiro)", correct: false },
+            { text: "Activo corrente (dispoñible)", correct: false },
+            { text: "Pasivo non corrente", correct: false },
+            { text: "Pasivo corrente", correct: true },
+            { text: "Patrimonio neto", correct: false }
+        ]
+    },{
+        question: "O préstamo bancario que a empresa debe devolver a curto prazo inclúese dentro de:",
+        answers: [
+            { text: "Activo non corrente (financeiro)", correct: false },
+            { text: "Activo corrente (dispoñible)", correct: false },
+            { text: "Pasivo non corrente", correct: false },
+            { text: "Pasivo corrente", correct: true },
+            { text: "Patrimonio neto", correct: false }
+        ]
+    },{
+        question: "O préstamo bancario que a empresa debe devolver a curto prazo inclúese dentro de:",
+        answers: [
+            { text: "Activo non corrente (financeiro)", correct: false },
+            { text: "Activo corrente (dispoñible)", correct: false },
+            { text: "Pasivo non corrente", correct: false },
+            { text: "Pasivo corrente", correct: true },
+            { text: "Patrimonio neto", correct: false }
+        ]
+    },{
+        question: "O préstamo bancario que a empresa debe devolver a curto prazo inclúese dentro de:",
+        answers: [
+            { text: "Activo non corrente (financeiro)", correct: false },
+            { text: "Activo corrente (dispoñible)", correct: false },
+            { text: "Pasivo non corrente", correct: false },
+            { text: "Pasivo corrente", correct: true },
+            { text: "Patrimonio neto", correct: false }
+        ]
+    },{
+        question: "O préstamo bancario que a empresa debe devolver a curto prazo inclúese dentro de:",
+        answers: [
+            { text: "Activo non corrente (financeiro)", correct: false },
+            { text: "Activo corrente (dispoñible)", correct: false },
+            { text: "Pasivo non corrente", correct: false },
+            { text: "Pasivo corrente", correct: true },
+            { text: "Patrimonio neto", correct: false }
+        ]
+    },{
+        question: "O préstamo bancario que a empresa debe devolver a curto prazo inclúese dentro de:",
+        answers: [
+            { text: "Activo non corrente (financeiro)", correct: false },
+            { text: "Activo corrente (dispoñible)", correct: false },
+            { text: "Pasivo non corrente", correct: false },
+            { text: "Pasivo corrente", correct: true },
+            { text: "Patrimonio neto", correct: false }
+        ]
+    },{
+        question: "O préstamo bancario que a empresa debe devolver a curto prazo inclúese dentro de:",
+        answers: [
+            { text: "Activo non corrente (financeiro)", correct: false },
+            { text: "Activo corrente (dispoñible)", correct: false },
+            { text: "Pasivo non corrente", correct: false },
+            { text: "Pasivo corrente", correct: true },
+            { text: "Patrimonio neto", correct: false }
+        ]
+    },{
+        question: "O préstamo bancario que a empresa debe devolver a curto prazo inclúese dentro de:",
+        answers: [
+            { text: "Activo non corrente (financeiro)", correct: false },
+            { text: "Activo corrente (dispoñible)", correct: false },
+            { text: "Pasivo non corrente", correct: false },
+            { text: "Pasivo corrente", correct: true },
+            { text: "Patrimonio neto", correct: false }
+        ]
+    },{
+        question: "O préstamo bancario que a empresa debe devolver a curto prazo inclúese dentro de:",
+        answers: [
+            { text: "Activo non corrente (financeiro)", correct: false },
+            { text: "Activo corrente (dispoñible)", correct: false },
+            { text: "Pasivo non corrente", correct: false },
+            { text: "Pasivo corrente", correct: true },
+            { text: "Patrimonio neto", correct: false }
+        ]
+    },{
+        question: "O préstamo bancario que a empresa debe devolver a curto prazo inclúese dentro de:",
+        answers: [
+            { text: "Activo non corrente (financeiro)", correct: false },
+            { text: "Activo corrente (dispoñible)", correct: false },
+            { text: "Pasivo non corrente", correct: false },
+            { text: "Pasivo corrente", correct: true },
+            { text: "Patrimonio neto", correct: false }
+        ]
+    },{
+        question: "O préstamo bancario que a empresa debe devolver a curto prazo inclúese dentro de:",
+        answers: [
+            { text: "Activo non corrente (financeiro)", correct: false },
+            { text: "Activo corrente (dispoñible)", correct: false },
+            { text: "Pasivo non corrente", correct: false },
+            { text: "Pasivo corrente", correct: true },
+            { text: "Patrimonio neto", correct: false }
+        ]
+    },{
+        question: "O préstamo bancario que a empresa debe devolver a curto prazo inclúese dentro de:",
+        answers: [
+            { text: "Activo non corrente (financeiro)", correct: false },
+            { text: "Activo corrente (dispoñible)", correct: false },
+            { text: "Pasivo non corrente", correct: false },
+            { text: "Pasivo corrente", correct: true },
+            { text: "Patrimonio neto", correct: false }
+        ]
+    },{
+        question: "O préstamo bancario que a empresa debe devolver a curto prazo inclúese dentro de:",
+        answers: [
+            { text: "Activo non corrente (financeiro)", correct: false },
+            { text: "Activo corrente (dispoñible)", correct: false },
+            { text: "Pasivo non corrente", correct: false },
+            { text: "Pasivo corrente", correct: true },
+            { text: "Patrimonio neto", correct: false }
+        ]
+    },{
+        question: "O préstamo bancario que a empresa debe devolver a curto prazo inclúese dentro de:",
+        answers: [
+            { text: "Activo non corrente (financeiro)", correct: false },
+            { text: "Activo corrente (dispoñible)", correct: false },
+            { text: "Pasivo non corrente", correct: false },
+            { text: "Pasivo corrente", correct: true },
+            { text: "Patrimonio neto", correct: false }
+        ]
+    },{
+        question: "O préstamo bancario que a empresa debe devolver a curto prazo inclúese dentro de:",
+        answers: [
+            { text: "Activo non corrente (financeiro)", correct: false },
+            { text: "Activo corrente (dispoñible)", correct: false },
+            { text: "Pasivo non corrente", correct: false },
+            { text: "Pasivo corrente", correct: true },
+            { text: "Patrimonio neto", correct: false }
+        ]
+    },{
+        question: "O préstamo bancario que a empresa debe devolver a curto prazo inclúese dentro de:",
+        answers: [
+            { text: "Activo non corrente (financeiro)", correct: false },
+            { text: "Activo corrente (dispoñible)", correct: false },
+            { text: "Pasivo non corrente", correct: false },
+            { text: "Pasivo corrente", correct: true },
+            { text: "Patrimonio neto", correct: false }
         ]
     },
     // Añade más preguntas aquí
